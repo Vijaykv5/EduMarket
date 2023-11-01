@@ -17,14 +17,16 @@ const Navbar = () => {
   return (
     <div className="border-slate-700 shadow-md text-white w-screen ">
       <div className="flex  ">
-        <div className="p-7 sm:hidden">
+        <div className="p-7 sm:hidden ">
           <RxHamburgerMenu ßonClick={hamburger} color="black" size={28} />
         </div>
+        <a href="/">
         <div className="logo justify-center  items-center flex font-semibold text-3xl p-6 ">
           <span className="text-black">Edu</span>
           <span className="text-violet-500">Market</span>
         </div>
-        <div className="p-7 ">
+        </a>
+        <div className="p-7 xl:hidden ">
           <AiOutlineUser color="black" size={32} />
         </div>
         
