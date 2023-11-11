@@ -23,17 +23,20 @@ function App() {
     setCountries(data);
   }
 
-
+ 
   return ( 
-    <div data-theme="light">
+    <div className='bg-black'>
       {/* <ul>
         {countries.map((country) => (
           <li key={country.name}>{country.name}</li>
         ))}
       </ul> */}
+
+
+        
       <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/auth' element={<Auth />} />
+        <Route path='/auth' element={<Home />} />
+        <Route path='/' element={<Auth />} />
         <Route path='/upload' element={<Upload />} />
         <Route path='/main' element={<Main />} />
       </Routes>

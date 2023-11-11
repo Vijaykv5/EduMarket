@@ -18,6 +18,22 @@ const Auth = () => {
 
     },
   });
+
+  const response =async function handleSubmit(){
+    fetch('http://localhost:8080/hello',{
+      headers:{
+        'Content-Type':'application/json',
+      },
+      body:JSON.stringify({
+        name,
+        email,
+        passowrd
+      })
+    })
+    const data = await response.json();
+    console.log(data);
+  }
+  
   // console.log("hey",errors);
   return (
     <div>

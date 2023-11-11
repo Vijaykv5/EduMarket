@@ -1,9 +1,11 @@
 const express=require('express');
-
 const app =express();
+const cors=require('cors')
 const PORT=8080;
 
+app.use(cors())
 
-app.listen(PORT,()=>{
-    console.log(`Server is running on ${PORT}`);
+app.get('/hello',(res,req)=>{
+    req.send('hello')
 })
+app.listen(PORT)

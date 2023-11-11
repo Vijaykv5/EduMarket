@@ -10,7 +10,8 @@ export default {
   plugins: [require("daisyui")],
   
   daisyui: {
-    themes: ["light", "dark", "cupcake"],
-  },
+    darkTheme: "light",
+    "blacke": "#00000"
+   },
 }
 
