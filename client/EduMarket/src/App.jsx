@@ -5,6 +5,8 @@ import Home from "./components/Home";
 import Upload from "./components/Upload";
 import Main from './components/Main';
 import { createClient } from '@supabase/supabase-js'
+import SignIn from './components/SignIn/Signin';
+import SignUp from './components/SignUp/Signup';
 
 const supabaseUrl = import.meta.env.VITE_SUPABASE_URL
 const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY
@@ -25,7 +27,7 @@ function App() {
 
  
   return ( 
-    <div className='bg-black'>
+    <div className=''>
       {/* <ul>
         {countries.map((country) => (
           <li key={country.name}>{country.name}</li>
@@ -37,6 +39,8 @@ function App() {
       <Routes>
         <Route path='/auth' element={<Home />} />
         <Route path='/' element={<Auth />} />
+        <Route path='/signin' element={<SignIn />} />
+        <Route path='/signup' element={<SignUp />} />
         <Route path='/upload' element={<Upload />} />
         <Route path='/main' element={<Main />} />
       </Routes>
