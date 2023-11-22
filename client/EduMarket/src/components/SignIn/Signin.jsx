@@ -13,8 +13,8 @@ import {
           <Typography variant="h3" color="blue-gray" className="text-center mb-4"> 
             Sign In
           </Typography>
-          <Typography color="gray" className="text-center mb-6">
-            Welcome! Enter your details to register.
+          <Typography color="gray" className="text-center text-md  mb-6">
+            Welcome! 
           </Typography>
           <form>
             

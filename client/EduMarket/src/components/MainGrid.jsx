@@ -2,22 +2,28 @@ import React from 'react';
 import { HiDocumentText } from 'react-icons/hi';
 
 const Maingrid = () => {
+  const boxStyles =
+    'w-full sm:w-60 h-40  text-white p-4 rounded-md transition-all duration-300 transform hover:scale-105 shadow-md flex items-center justify-center';
+
+  const iconStyles =
+    'text-black transition-all duration-300 transform scale-125 hover:scale-150';
+
+  const headingStyles =
+    'text-3xl sm:text-5xl  mt-6 font-bold text-center mb-8';
+
   return (
-    <div className="flex flex-col items-center justify-center h-screen">
-      <h1 className="text-white text-2xl font-bold mb-8">Select Your Semester</h1>
-      <div className="flex space-x-6">
-        <div className="w-60 h-40 bg-violet-500 hover:bg-white hover:border border-violet-600 text-white p-4 rounded-md text-center justify-center items-center">
-          <HiDocumentText size={72}/>
-        </div>
-        <div className="w-60 h-40 bg-blue-700 text-white p-4 rounded-md">2</div>
-        <div className="w-60 h-40 bg-blue-700 text-white p-4 rounded-md">3</div>
-        <div className="w-60 h-40 bg-blue-700 text-white p-4 rounded-md">4</div>
-      </div>
-      <div className="flex space-x-6 mt-4">
-        <div className="w-60 h-40 bg-blue-700 text-white p-4 rounded-md">5</div>
-        <div className="w-60 h-40 bg-blue-700 text-white p-4 rounded-md">6</div>
-        <div className="w-60 h-40 bg-blue-700 text-white p-4 rounded-md">7</div>
-        <div className="w-60 h-40 bg-blue-700 text-white p-4 rounded-md">8</div>
+    <div className="flex flex-col items-center justify-center min-h-screen px-4">
+      <h1 className={headingStyles}>Select Your Semester</h1>
+      <div className="flex flex-wrap justify-center gap-4">
+      
+        {[1,2, 3, 4, 5, 6, 7, 8].map((number) => (
+          <div
+            key={number}
+            className={`${boxStyles} bg-black hover:bg-white text-5xl  hover:text-black`}
+          >
+            S{number}
+          </div>
+        ))}
       </div>
     </div>
   );
